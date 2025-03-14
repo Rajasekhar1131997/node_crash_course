@@ -6,11 +6,11 @@ const fs = require('fs');
 
 // reading files
 // readfile is an asynchronous function is used to read the content of a file.
-fs.readFile('./docs/blog1.txt', (error,data) => {
-if (error) {
-    console.log(error);
-}
-console.log(data.toString());
+fs.readFile('./docs/blog1.txt', (error, data) => {
+    if (error) {
+        console.log(error);
+    }
+    console.log(data.toString());
 });
 
 console.log('last line');
@@ -27,7 +27,7 @@ fs.writeFile('./docs/blog2.txt', 'Hello, world', () => {
 
 // directories
 // checking if a directory exists and existsSync is a synchronous function that checks if a file or directory exists. if exists it will remove the directory.
-if(!fs.existsSync('./assets')) {
+if (!fs.existsSync('./assets')) {
     fs.mkdir('./assets', (error) => {
         if (error) {
             console.log(error);
